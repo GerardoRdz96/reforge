@@ -1,13 +1,13 @@
 ---
-name: reforge
-description: Reverse-engineer any open-source repo into a clean, queryable understanding and a rebuildable blueprint — then build your own customized version from the blueprint. Use when the user wants to understand how a repo works, learn its architecture, or rebuild a tool with their own changes ("how does X work", "rebuild X but with Y", "reverse engineer X").
+name: deepfork
+description: Reverse-engineer any open-source repo into a clean, queryable understanding and a rebuildable blueprint — then build your own customized version from the blueprint. Use when the user wants to understand how a repo works, learn its architecture, or rebuild a tool with their own changes ("how does X work", "rebuild X but with Y", "reverse engineer X", "deepfork X").
 ---
 
-# reforge — understand any repo, rebuild it yours
+# DeepFork — don't fork the code, fork the design
 
 You are running a five-phase reverse-engineering pipeline. The product of each phase is a file the user keeps. Never skip Phase 0.
 
-All outputs go to `reforge-out/<target-name>/` in the current working directory.
+All outputs go to `deepfork-out/<target-name>/` in the current working directory.
 
 ## Phase 0 — License gate (non-negotiable)
 
@@ -20,12 +20,12 @@ Before cloning anything:
    - The rebuild is **clean-room**: written from the blueprint, not from the source.
    - Copyleft targets (GPL/AGPL): warn that a rebuild closely derived from the design may carry obligations; recommend the rebuild also be open source.
    - The final repo gets an `ATTRIBUTION.md` crediting the original.
-4. Record license + rules in `reforge-out/<target>/LICENSE-GATE.md`.
+4. Record license + rules in `deepfork-out/<target>/LICENSE-GATE.md`.
 
 ## Phase 1 — Acquire
 
 ```bash
-git clone --depth 1 <target-url> reforge-out/<target>/source
+git clone --depth 1 <target-url> deepfork-out/<target>/source
 ```
 
 Note stars/age/activity in one line (context for how battle-tested the design is).
@@ -35,7 +35,7 @@ Note stars/age/activity in one line (context for how battle-tested the design is
 **With graphify** (preferred — check `command -v graphify`; if missing, offer: `uv tool install graphifyy`, or proceed to the fallback):
 
 ```bash
-cd reforge-out/<target>/source
+cd deepfork-out/<target>/source
 graphify .                          # code-only is free & local (tree-sitter AST)
 # add --backend claude-cli if the repo's docs/images matter to understanding
 graphify cluster-only .             # names communities, writes GRAPH_REPORT.md
@@ -93,5 +93,5 @@ Then write **`BLUEPRINT.md`** — a spec someone could build from WITHOUT ever s
 
 - Phase 0 always runs. Private/leaked/unlicensed code: understanding-report only, never a rebuild.
 - Never paste original source into the rebuild. Behavioral description is the only thing that crosses the wall.
-- If the target is enormous (>5k files), reforge ONE subsystem the user picks from the community list.
-- Keep `reforge-out/` out of the rebuilt repo.
+- If the target is enormous (>5k files), deepfork ONE subsystem the user picks from the community list.
+- Keep `deepfork-out/` out of the rebuilt repo.

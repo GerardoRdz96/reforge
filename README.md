@@ -1,19 +1,19 @@
 <div align="center">
 
-<img src="assets/reforge-banner.jpg" alt="reforge — a penguin blacksmith forging a knowledge graph" width="100%">
+<img src="assets/deepfork-banner.jpg" alt="DeepFork — a penguin blacksmith forging a knowledge graph" width="100%">
 
-# 🔨 reforge
+# 🔱 DeepFork
 
-### Understand any repo. Rebuild it **yours**.
+### Don't fork the code. **Fork the design.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-fcb116.svg)](LICENSE)
-[![Agent Skill](https://img.shields.io/badge/Agent-Skill-blueviolet)](skills/reforge/SKILL.md)
+[![Agent Skill](https://img.shields.io/badge/Agent-Skill-blueviolet)](skills/deepfork/SKILL.md)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-first--class-d97757)](https://claude.com/claude-code)
 [![Powered by graphify](https://img.shields.io/badge/powered%20by-graphify%2065k★-2a9d9f)](https://github.com/safishamsi/graphify)
 [![Clean Room](https://img.shields.io/badge/method-clean--room-success)](#%EF%B8%8F-why-clean-room)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/GerardoRdz96/reforge/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/GerardoRdz96/deepfork/pulls)
 
-**reforge** is an agent skill that reverse-engineers any open-source repository into<br>
+**DeepFork** is an agent skill that reverse-engineers any open-source repository into<br>
 🧠 the cleanest possible explanation of how it actually works, and<br>
 📐 a behavioral blueprint you can rebuild from — **with your changes, in your stack, clean-room.**
 
@@ -25,7 +25,7 @@
 > 🍴 Stop forking when what you wanted was *your own version*.
 
 ```text
-you:    /reforge https://github.com/karpathy/micrograd — but in TypeScript, with a graph visualizer
+you:    /deepfork https://github.com/karpathy/micrograd — but in TypeScript, with a graph visualizer
 
 agent:  ⚖️  license gate ........ MIT ✓
         🕸️  knowledge graph ..... 55 nodes · 86 edges · god nodes: Value, Neuron, Layer, MLP
@@ -39,7 +39,7 @@ agent:  ⚖️  license gate ........ MIT ✓
 Works with **Claude Code** (and any agent that reads [skills](https://github.com/anthropics/skills)):
 
 ```bash
-npx skills add GerardoRdz96/reforge
+npx skills add GerardoRdz96/deepfork
 ```
 
 🕸️ Optional but recommended — the graph engine that makes the understanding pass exceptional ([graphify](https://github.com/safishamsi/graphify), 65k★):
@@ -48,7 +48,7 @@ npx skills add GerardoRdz96/reforge
 uv tool install graphifyy   # double-y! code analysis is local & free (tree-sitter)
 ```
 
-Without graphify, reforge falls back to manual repo mapping. With it: god-node detection, auto-named subsystems, surprising-connection analysis, and token-cheap graph queries.
+Without graphify, DeepFork falls back to manual repo mapping. With it: god-node detection, auto-named subsystems, surprising-connection analysis, and token-cheap graph queries.
 
 ## 🎁 What you get
 
@@ -77,27 +77,27 @@ flowchart LR
 
 ## 📚 Worked example
 
-[`examples/micrograd/`](examples/micrograd/) — karpathy's micrograd (12k★) reforged end-to-end:
+[`examples/micrograd/`](examples/micrograd/) — karpathy's micrograd (12k★) deepforked end-to-end:
 
 - 🧠 [`UNDERSTANDING.md`](examples/micrograd/UNDERSTANDING.md) — the autograd engine explained in 6 sections, from a real 55-node graph run ($0)
 - 📐 [`BLUEPRINT.md`](examples/micrograd/BLUEPRINT.md) — "gradflow": the TypeScript + built-in-visualizer rebuild spec
 
 ## 🛡️ Why clean-room?
 
-reforge is built to keep you on the right side of open source:
+DeepFork is built to keep you on the right side of open source:
 
 - ⚖️ **Phase 0 license gate** — checks the target's license first; refuses rebuilds of unlicensed code.
 - 🧱 **The blueprint wall** — only *behavioral descriptions* cross from the original to your rebuild. Never code. Your implementation is original work.
 - 🔓 **Copyleft awareness** — GPL/AGPL targets come with a warning and a recommendation that your rebuild stay open.
 - 🙏 **Attribution by default** — every rebuild credits the original design.
 
-This is how engineers have legally reimplemented systems for decades (Compaq vs IBM BIOS, 1982). reforge just makes the discipline automatic.
+This is how engineers have legally reimplemented systems for decades (Compaq vs IBM BIOS, 1982). DeepFork just makes the discipline automatic.
 
 ## ❓ FAQ
 
 <details>
 <summary><b>Is this just "fork it"?</b></summary>
-<br>No. A fork keeps their code, their architecture, their language, their debt. reforge gives you their <i>lessons</i> in a spec, and a version that's actually yours.
+<br>No. A *shallow* fork keeps their code, their architecture, their language, their debt. DeepFork gives you their <i>lessons</i> in a spec, and a version that's actually yours.
 </details>
 
 <details>
@@ -107,7 +107,7 @@ This is how engineers have legally reimplemented systems for decades (Compaq vs 
 
 <details>
 <summary><b>Does it work on huge repos?</b></summary>
-<br>Yes — pick one subsystem from the community list and reforge that. The graph makes subsystem boundaries visible.
+<br>Yes — pick one subsystem from the community list and deepfork that. The graph makes subsystem boundaries visible.
 </details>
 
 <details>
@@ -119,7 +119,7 @@ This is how engineers have legally reimplemented systems for decades (Compaq vs 
 
 <div align="center">
 
-⭐ **If reforge saved you a weekend of code-reading, star the repo — it helps others find it.** ⭐
+⭐ **If DeepFork saved you a weekend of code-reading, star the repo — it helps others find it.** ⭐
 
 MIT · Built by 🐧 [The Penguin Alley](https://penguinalley.com) · Powered by [graphify](https://github.com/safishamsi/graphify)
 
